@@ -1,0 +1,1 @@
+let procurar= document.getElementById("txtpes")

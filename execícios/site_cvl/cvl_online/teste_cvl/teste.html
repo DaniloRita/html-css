@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-stp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="../imagem/logo_cvl_online.png" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+<title>Compra & Vendas Online</title>
+</head>
+
+<body>
+
+<!-- ================= LOGIN ================= -->
+<section id="telaLogin" style="display:none;padding:15px">
+
+<h3>Entrar</h3>
+
+<input type="tel" id="loginTelefone" placeholder="Número"><br><br>
+
+<button onclick="entrar()">Entrar</button>
+
+<p onclick="abrirCadastro()" style="color:blue;cursor:pointer">Criar conta</p>
+<p onclick="abrirRecuperacao()" style="color:blue;cursor:pointer">Esqueci a conta</p>
+
+</section>
+
+
+<!-- ================= CADASTRO ================= -->
+<section id="telaCadastro" style="display:none;padding:15px">
+
+<h3>Criar conta</h3>
+
+<select id="tipoConta" onchange="trocarTipoConta()">
+    <option value="cliente">Cliente</option>
+    <option value="vendedor">Vendedor</option>
+</select><br><br>
+
+<input type="file" id="cadFoto"><br><br>
+
+<input type="text" id="cadNome" placeholder="Nome"><br><br>
+<input type="tel" id="cadTelefone" placeholder="Número"><br><br>
+<input type="date" id="cadNascimento"><br><br>
+
+<!-- apenas vendedor -->
+<div id="areaVendedor" style="display:none">
+
+<input type="text" id="cadLocalizacao" placeholder="Localização"><br><br>
+
+Sexo:
+<input type="radio" name="cadSexo" value="M" checked> M
+<input type="radio" name="cadSexo" value="F"> F
+<br><br>
+
+</div>
+
+<button onclick="criarConta()">Criar conta</button>
+
+<p onclick="voltarLogin()" style="color:blue;cursor:pointer">Voltar</p>
+
+</section>
+
+
+<!-- ================= RECUPERAÇÃO ================= -->
+<section id="telaRecuperar" style="display:none;padding:15px">
+
+<h3>Recuperar conta</h3>
+
+<input type="tel" id="recTel" placeholder="Seu número"><br><br>
+
+<button onclick="recuperarConta()">Recuperar</button>
+
+<p onclick="voltarLogin()" style="color:blue;cursor:pointer">Voltar</p>
+
+</section>
+
+
+
+<!-- ================= TOPO (só depois do login) ================= -->
+<header id="topo" style="display:none">
+<h3>Compras & Vendas Online</h3>
+</header>
+
+
+
+<!-- ================= PESQUISA ================= -->
+<section id="pesquisa" style="display:none">
+<input type="text" id="campoPesquisa" placeholder="Pesquisar produtos...">
+</section>
+
+
+
+<!-- ================= CATEGORIAS ================= -->
+<section id="categorias" style="display:none">
+
+<div class="categoria" onclick="abrirCategoria('roupas')">
+<img src="imagens/roupas.jpg">
+<div>Roupas</div>
+</div>
+
+<div class="categoria" onclick="abrirCategoria('calcados')">
+<img src="https://tse1.mm.bing.net/th/id/OIP.2ZrJT2L59_nAJ-G-cy7JXAHaFj">
+<div>Calçados</div>
+</div>
+
+<div class="categoria" onclick="abrirCategoria('cabelos')">
+<img src="https://tse4.mm.bing.net/th/id/OIP.2kduLcAjNf6CO31c9NsXwgHaE8">
+<div>Cabelos</div>
+</div>
+
+<div class="categoria" onclick="abrirCategoria('celulares')">
+<img src="imagem.celulares.jpg">
+<div>Celulares</div>
+</div>
+
+<div class="categoria" onclick="abrirCategoria('radio')">
+<img src="imagem.radio.jpg">
+<div>Rádios</div>
+</div>
+
+<div class="categoria" onclick="abrirCategoria('bolsas')">
+<img src="imagem.bolsas">
+<div>Bolsas</div>
+</div>
+
+</section>
+
+
+
+<!-- ================= LISTA ================= -->
+<section id="produtos" style="display:none">
+<h3>Produtos recentes</h3>
+<div id="listaProdutos"></div>
+</section>
+
+
+
+<!-- ================= MENU ================= -->
+<nav id="menu" style="display:none">
+
+<div class="botao" onclick="abrirTela('home')">🏠<br>Início</div>
+<div class="botao" onclick="abrirTela('perfil')">👤<br>Perfil</div>
+<div class="botao" onclick="abrirTela('publicar')">➕<br>Publicar</div>
+<div class="botao" onclick="abrirTela('definicoes')">⚙️<br>Definições</div>
+
+</nav>
+
+
+
+<!-- ================= PUBLICAR ================= -->
+<section id="telaPublicar" style="display:none;padding:10px;padding-bottom:80px">
+
+<h3>Publicação de produtos</h3>
+
+<input type="file" id="img1"><br><br>
+<input type="file" id="img2"><br><br>
+<input type="file" id="img3"><br><br>
+
+<input type="text" id="nomeProduto" placeholder="Marca do produto"><br><br>
+<input type="number" id="precoProduto" placeholder="Preço (Dbs)"><br><br>
+
+<select id="estadoProduto">
+<option value="novo">Novo</option>
+<option value="usado">Segunda mão</option>
+<option value="velho">Velho</option>
+</select><br><br>
+
+<textarea id="descricaoProduto" placeholder="Descrição do produto"></textarea><br><br>
+
+<select id="categoriaProduto">
+<option value="roupas">Roupas</option>
+<option value="calcados">Calçados</option>
+<option value="cabelos">Cabelos</option>
+<option value="radio">Rádios</option>
+<option value="t-shirts">T-shirts</option>
+<option value="celulares">Celulares</option>
+<option value="bolsas">Bolsas</option>
+</select><br><br>
+
+<button onclick="publicarProduto()">Publicar</button>
+
+</section>
+
+
+
+<!-- ================= PRODUTO ================= -->
+<section id="telaProduto" style="display:none;padding:10px">
+
+<button onclick="voltar()">⬅ Voltar</button>
+
+<h3 id="detalheNome"></h3>
+<p id="detalhePreco"></p>
+
+<div id="areaAvaliacao"></div>
+<p id="infoVendedor"></p>
+
+<h4>Comentários</h4>
+<div id="listaComentarios"></div>
+
+<input type="text" id="novoComentario" placeholder="Escreva um comentário">
+<button onclick="enviarComentario()">Enviar</button>
+
+<hr>
+
+<div id="galeria"></div>
+
+</section>
+
+
+
+<!-- ================= IMAGEM ================= -->
+<div id="visorImagem" onclick="fecharImagem()"
+style="display:none;position:fixed;inset:0;background:black;justify-content:center;align-items:center;z-index:9999">
+<img id="imgGrande" style="max-width:100%;max-height:100%">
+</div>
+
+
+
+<!-- ================= PERFIL ================= -->
+<section id="telaPerfil" style="display:none;padding:10px;padding-bottom:80px">
+
+<h3>Perfil</h3>
+
+<img id="previewPerfil"
+style="width:90px;height:90px;border-radius:50%;object-fit:cover;display:none">
+
+<p id="perfilNome"></p>
+<p id="perfilTelefone"></p>
+<p id="perfilLocalizacao"></p>
+
+<div id="perfilPublicacoes"></div>
+
+</section>
+
+
+
+<!-- ================= DEFINIÇÕES ================= -->
+<section id="telaDefinicoes" style="display:none;padding:10px;padding-bottom:80px">
+
+<h3>Definições</h3>
+
+<button onclick="abrirEntradaRestrita()">🔐 Entrada restrita</button>
+
+<div id="areaRestrita" style="display:none;margin-top:10px">
+<div id="listaPedidos"></div>
+</div>
+
+<p>Tema</p>
+<button onclick="temaVerde()">🟢 Verde</button>
+<button onclick="temaAzul()">🔵 Azul</button>
+<button onclick="temaVermelho()">🔴 Vermelho</button>
+
+<hr>
+<p>Versão 1.2.3.1</p>
+
+</section>
+
+
+<script src="app.js"></script>
+</body>
+</html>

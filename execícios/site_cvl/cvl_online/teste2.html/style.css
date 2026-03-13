@@ -1,0 +1,106 @@
+
+
+body{
+    margin:0;
+    font-family: Arial;
+background-color: white;
+   background-attachment: fixed;
+}
+
+/* topo */
+header{
+    background-image: linear-gradient(360deg, rgb(25, 220, 25),rgb(12, 122, 12), rgb(4, 65, 4));
+    color:white;
+    padding:10px;
+    text-align:right;
+}
+#telaDefinicoes{
+    text-align: center;
+}
+#telaPublicar{
+    text-align: center;
+}
+#telaPerfil{
+  
+    text-align: center;
+    
+}
+
+
+/* barra pesquisa */
+#pesquisa{
+    padding:10px;
+    background:white;
+}
+
+#pesquisa input{
+    width:100%;
+    padding:10px;
+    font-size:16px;
+}
+
+/* categorias rolando */
+#categorias{
+    display:flex;
+    overflow-x:auto;
+    gap:5px;
+    padding:10px;
+    background:#fff;
+}
+
+.categoria{
+    min-width:90px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.categoria img{
+    width:70px;
+    height:70px;
+    border-radius:10px;
+}
+
+/* produtos */
+#produtos{
+    padding:10px;
+}
+
+/* menu inferior */
+#menu{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:60px;
+    background:white;
+    display:flex;
+    border-top:1px solid #ccc;
+    color: white;
+    background-image: linear-gradient(360deg,rgb(4, 65, 4),rgb(12, 122, 12), rgb(25, 220, 25));
+    
+}
+
+.botao{
+    flex:1;
+    text-align:center;
+    padding-top:6px;
+    font-size:12px;
+    cursor:pointer;
+}
+h3{
+    text-align: center;
+
+}
+.btnUpload{
+  display:inline-block;
+  padding:8px 12px;
+  background:#2ecc71;
+  color:#fff;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+
+
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-stp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compra & Vendas Online</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- CADASTRO -->
+<section id="telaCadastro" style="display:none;padding:15px">
+    <h3>Criar conta</h3>
+
+    <select id="tipoConta">
+        <option value="cliente">Cliente</option>
+        <option value="vendedor">Vendedor</option>
+    </select><br><br>
+
+    <input type="text" id="cadNome" placeholder="Nome"><br><br>
+    <input type="tel" id="cadTelefone" placeholder="Telefone"><br><br>
+
+    <button onclick="criarConta()">Continuar</button>
+</section>
+
+<header>
+    <h3>Compras & Vendas Online</h3>
+</header>
+
+<section id="pesquisa">
+    <input type="text" id="campoPesquisa" placeholder="Pesquisar produto ou vendedor">
+</section>
+
+<section id="categorias">
+    <div class="categoria" onclick="abrirCategoria('roupas')"><div>Roupas</div></div>
+    <div class="categoria" onclick="abrirCategoria('calcados')"><div>Calçados</div></div>
+    <div class="categoria" onclick="abrirCategoria('cabelos')"><div>Cabelos</div></div>
+    <div class="categoria" onclick="abrirCategoria('celulares')"><div>Celulares</div></div>
+</section>
+
+<section id="produtos">
+    <h3>Produtos recentes</h3>
+    <div id="listaProdutos"></div>
+</section>
+
+<nav id="menu">
+    <div class="botao" onclick="abrirTela('home')">🏠<br>Início</div>
+    <div class="botao" onclick="abrirTela('perfil')">👤<br>Perfil</div>
+    <div class="botao" onclick="abrirTela('publicar')">➕<br>Publicar</div>
+    <div class="botao" onclick="abrirTela('definicoes')">⚙️<br>Definições</div>
+</nav>
+
+<!-- PUBLICAR -->
+<section id="telaPublicar" style="display:none;padding:10px">
+
+    <h3>Publicação de produtos</h3>
+
+    <input type="file" id="img1"><br><br>
+    <input type="file" id="img2"><br><br>
+    <input type="file" id="img3"><br><br>
+
+    <input type="text" id="nomeProduto" placeholder="Nome do produto"><br><br>
+    <input type="number" id="precoProduto" placeholder="Preço"><br><br>
+
+    <select id="categoriaProduto">
+        <option value="roupas">Roupas</option>
+        <option value="calcados">Calçados</option>
+        <option value="cabelos">Cabelos</option>
+        <option value="celulares">Celulares</option>
+    </select><br><br>
+
+    <button onclick="publicarProduto()">Publicar</button>
+</section>
+
+<!-- PRODUTO -->
+<section id="telaProduto" style="display:none;padding:10px">
+
+    <button onclick="voltar()">⬅ Voltar</button>
+
+    <h3 id="detalheNome"></h3>
+    <p id="detalhePreco"></p>
+
+    <div id="areaAvaliacao"></div>
+
+    <p id="infoVendedor"></p>
+
+    <h4>Comentários</h4>
+    <div id="listaComentarios"></div>
+
+    <input type="text" id="novoComentario" placeholder="Escreva um comentário">
+    <button onclick="enviarComentario()">Enviar</button>
+
+    <hr>
+
+    <div id="galeria"></div>
+</section>
+
+<!-- PERFIL -->
+<section id="telaPerfil" style="display:none;padding:10px">
+
+    <h3>Meu perfil</h3>
+
+    <input type="file" id="fotoPerfil" hidden>
+    <label for="fotoPerfil" class="btnUpload">Escolher foto</label><br><br>
+
+    <input type="text" id="nomePerfil" placeholder="Nome"><br><br>
+    <input type="tel" id="telefonePerfil" placeholder="Telefone"><br><br>
+    <input type="text" id="localizacaoPerfil" placeholder="Morada"><br><br>
+
+    <button onclick="guardarPerfil()">Guardar</button><br><br>
+
+    <img id="previewPerfil" style="width:90px;height:90px;border-radius:50%;display:none">
+</section>
+
+<!-- DEFINIÇÕES -->
+<section id="telaDefinicoes" style="display:none;padding:10px">
+
+    <h3>Definições</h3>
+
+    <button onclick="abrirEntradaRestrita()">🔐 Entrada restrita</button>
+
+    <div id="areaRestrita" style="display:none">
+        <div id="listaPedidos"></div>
+    </div>
+
+    <hr>
+
+    <p>Tema</p>
+    <button onclick="temaVerde()">🟢</button>
+    <button onclick="temaAzul()">🔵</button>
+    <button onclick="temaVermelho()">🔴</button>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
