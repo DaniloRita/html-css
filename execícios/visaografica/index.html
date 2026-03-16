@@ -5,14 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
     <link rel="shortcut icon" href="imagem/vgpequeno.png" type="image/x-icon">
-    <title>Visão Gráfica.stp</title>
+    <title>Visão Gráfica stp</title>
 </head>
+   <title>Visão Gráfica stp</title>
+
+   <meta name="description" content="Visão Gráfica STP é um site de design gráfico, impressão e serviços visuais em São Tomé e Príncipe"> 
 <body>
     <header>
-        <section id="menu">
-            <input type="button" value="Menu ≡ " onclick="menu()" >
+        <section id="menu-topo">
+            <input type="button" value="Menu ≡ " onclick="abrirmenu()" >
         </section>
     </header>
+    <div id="fundo" onclick="fecharMenu()"></div>
+    <section id="menu">
+        <button onclick="abrirmenu()">x</button>
+        <ul>
+            <li>Início</li>
+            <li>Serviços</li>
+            <li>Contactos</li>
+        </ul>
+    </section>
+
 <section>
             <div class="imagem">
             <img src="imagem/vgnormal.png" alt="Visão Gráfica" style="width: 300px;" style="height: auto;">
@@ -20,8 +33,8 @@
                 <span id="subtitulo">Impressão, Informática e Consumíveis</span></p> 
         <hr color="black">
 </section>
-<section id="informacao">
-<ul type="square" class="informacao1">
+<section id="listas">
+<ul>
     <li>Cópias</li>
     <li>Impressão</li>
     <li>Encardenação</li>
@@ -31,7 +44,7 @@
     <li>Convite | Blocos</li>
     <li>Carimbos</li>
 </ul>
-<ul type="square">
+<ul>
     <li>Banner</li>
     <li>Faixas</li>
     <li>Letreiros</li>
@@ -43,7 +56,44 @@
 </ul>
 
 </section>
+    <!-- SEÇÃO DE SERVIÇOS-->
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="impressão.jpg" alt="impressão">
+                <h3>Impressão</h3>
+                    <p>Impressão de alta qualidade para todos os formatos.</p>
+            </div>
+            <div class="card"> 
+                <img src="copias.pjg" alt="Cópias">
+                <h3>Cópias</h3>
+                <p>Cópias rápida e econômicas para todos os documentos</p>
+            </div>
+            <div class="card"> 
+                <img src="ercardenacao.jpg" alt="Encardenação">
+                <h3>Encardenação</h3>
+                <p>Encardenação  profissional para trabalhos e projrctos.</p>
+            </div>
+        </div>
+    </section>
+    <!--GALERIA E MINI VIDEOS-->
+    <section id="galeria">
+    <h2>Galeria e Produtos</h2>
+    <div class="galeria-container">
+        <img src="trabalho1.jpg" alt="Trabalho1">
+        <img src="trabalho2.jpg" alt="Trabalho2"><video controls width="250">
+            <source src="video_produto2.mp4" type="video.mp4"> Seu navegador não suporta vídeo.
+        </video>
+    </div>
+    </section>
+    <!--RODAPÉ-->
+    <footer>
+        <p>&copy; 2026 Visão Gráfica. Todos os direitos resservados.</p>
+        <p>Endereço:Rua Amilca Cabral-São Tomé | Telefone +239 2221205 | Email: <a href="mailto:visaograficaloja@gmail.com" class="animado">visaograficaloja@gmail.com</a></p>
+    </footer>
 
+<p id="desenvolvedor"><em><b>Programador:</b> &copy;Daniscarline</em></p>
 
     <script src="app.js"></script>
 </body>

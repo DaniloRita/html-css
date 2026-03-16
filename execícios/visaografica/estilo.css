@@ -1,14 +1,122 @@
 body{
-    background-color: rgb(135, 102, 3);
+    background-color: rgba(71, 53, 1, 0.901);
     font-family: 'Times New Roman', Times, serif Arial, Helvetica, sans-serif;
+    max-width: 1000px;
+    margin:center ;
+    width: auto;
 }
 header{
     background-color: rgb(1, 1, 84);
 height: auto;
+width:100%;
+margin: auto;
+padding: 10px;
+}
+
+/* MENU DESLIZANTE DA ESQUERDA*/
+#menu{
+    position: fixed;
+    top:50px;
+    left: 8px;
+    width: 40%;
+    height: 25%;
+    box-shadow: 4PX,0,15px rgba(0,0,0,0,3); 
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: auto;
+    transform: translateX(-100%);
+    transform: transform 1s ease;
+    z-index: 10;
+    
+}
+#menu.ativo{
+    transform:translateX(0)
+}
+#fundo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: rgda(0,0,0,0,5);   
+    z-index: 1;
+}
+menu button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+/*Serviços*/
+#servicos{
+    padding: 40px 20px;
+    background: #f5f5f5;
+    text-align: center;
+}
+.cards{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card{
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0,2);
+}
+
+.card img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+/*GALERIA*/
+#galeria{
+    padding: 40px 20px;
+    text-align: center;
+}
+.galeria-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.galeria-container img, 
+.galeria-container video{
+    border-radius: 10px;
+}
+/*RODAPÉ*/
+footer{
+    background: #222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 15;
+    font-style: italic;
+    line-height: 1.6;/* espaço entre as linahs mais agardável*/
+    border-top: 2px solid #444;/* Linha fna pap separar do conteúdo*/
+
+}
+footer a{
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;/*Transição suave*/
+}
+footer a:hover{
+    color: #f0a500;/* muda a cor ao passar o mouse*/
+}
+footer a.animado:hover{
+    animation: mudarCor 1s infinite alternate;
+}
+@keyframes mudarCor{
+    0%{color: #fff;}
+    50%{color: #f0a500;}
+    100%{color: #fff;}
 }
 #titulo{
     color: rgb(248, 248, 252);
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 8px 8px 4px black;
     font-size: 40pt;
 }
 #subtitulo{
@@ -19,13 +127,21 @@ height: auto;
     display: flex;
     align-items: center;
     gap: 10px;
+    max-width: 100%;
+    height: auto;
 }
-#informacao{
-    background-color: white;
-    border-radius: 8px;
+#listas{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    background: white;
+    padding: auto;
+    width:auto;
+    border-radius: 10px;
+
 }
-.informacao1{
+#desenvolvedor{
+    color: white;
+    margin-right: auto;
     
-    gap: 10px;
-    align-items: center;
 }
