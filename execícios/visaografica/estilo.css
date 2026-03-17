@@ -71,6 +71,7 @@ menu button{
 .card img{
     max-width: 100%;
     border-radius: 10px;
+    width: 100%;
 }
 .estampa{
     display: none;
