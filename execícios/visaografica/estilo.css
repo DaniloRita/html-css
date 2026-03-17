@@ -145,3 +145,6 @@ footer a.animado:hover{
     margin-right: auto;
     
 }
+html{
+    scroll-behavior: smooth;
+}
