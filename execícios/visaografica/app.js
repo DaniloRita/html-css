@@ -15,3 +15,23 @@ function fecharMenu(){
     menu.classList.remove("ativo")
     fundo.style.display= "none"
 }
+let i = 0;
+let estampas = document.querySelectorAll(".estampa");
+
+function trocarEstampa(){
+
+estampas.forEach(img => img.style.display = "none");
+
+i++;
+
+if(i > estampas.length){
+i = 1;
+}
+
+estampas[i-1].style.display = "block";
+
+setTimeout(trocarEstampa, 5000);
+
+}
+
+trocarEstampa();
