@@ -15,7 +15,7 @@ header{
     align-items: stretch;
     justify-content: flex-end;
 
-    height: 60px;
+    height:auto;
     width:100%;
     margin: auto;
     padding:10px;
@@ -62,7 +62,7 @@ menu button{
 #menu-topo input{
     height: 100%;/*Ocupa toda altura do header*/
 
-    font-size: 55px;/*Aumenta o texto*/
+    font-size: 40px;/*Aumenta o texto*/
     padding: 0px 22px;/* Aumenta o tamanho do botão*/
     border-radius: 8px;/*Cantos arredondados*/
     border: none;
@@ -105,7 +105,7 @@ menu button{
     border-radius: 10px;
     width: 100%;
 }
-.estampa{
+.estampa , .Encardena{
     display: none;
 }
 

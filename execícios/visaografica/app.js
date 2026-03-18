@@ -15,23 +15,27 @@ function fecharMenu(){
     menu.classList.remove("ativo")
     fundo.style.display= "none"
 }
-let i = 0;
-let estampas = document.querySelectorAll(".estampa");
+function iniciarSlider(classe) {
+    let i = 0;
+    let imagens = document.querySelectorAll(classe);
 
-function trocarEstampa(){
+    function trocar() {
+        imagens.forEach(img => img.style.display = "none");
 
-estampas.forEach(img => img.style.display = "none");
+        i++;
+        if (i > imagens.length) {
+            i = 1;
+        }
 
-i++;
+        imagens[i - 1].style.display = "block";
 
-if(i > estampas.length){
-i = 1;
+        setTimeout(trocar, 5000);
+    }
+
+    trocar();
 }
 
-estampas[i-1].style.display = "block";
+// iniciar sliders
+iniciarSlider(".estampa");
+iniciarSlider(".Encardena");
 
-setTimeout(trocarEstampa, 5000);
-
-}
-
-trocarEstampa();
