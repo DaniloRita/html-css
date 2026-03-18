@@ -28,18 +28,18 @@ header{
 /* MENU DESLIZANTE DA ESQUERDA*/
 #menu{
     position: fixed;
-    top:50px;
-    left: 1px;
-    width: 40%;
-    height: 25%;
+    top:0px;
+    width: 100%;
+    height: 100%;/* Altura */
     box-shadow: 4PX,0,15px rgba(0,0,0,0,3); 
     background: white;
     padding: 20px;
     border-radius: 10px;
     text-align: auto;
-    transform: translateX(-100%);
-    transform: transform 1s ease;
+    transform: translateX(100%);/*Começa scondido a direita*/
+    transform: transform 0.3s ease;
     z-index: 1000;
+    right: 0;/*Agora fica a direita*/
     
 }
 #menu.ativo{
@@ -54,11 +54,16 @@ header{
     background: rgda(0,0,0,0,5);   
     z-index: 1;
 }
-menu button{
+#menu button{
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 10px; /* joga o botão para direita */
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
+
 #menu-topo input{
     height: 100%;/*Ocupa toda altura do header*/
 
