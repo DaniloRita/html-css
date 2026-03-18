@@ -4,13 +4,25 @@ body{
     max-width: 5000px;
     margin:center ;
     width: auto;
+    padding-top: 60px;
 }
 header{
     background-color: rgb(1, 4, 97);
-height: auto;
-width:100%;
-margin: auto;
-padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+
+    height: 60px;
+    width:100%;
+    margin: auto;
+    padding:10px;
+    header{
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
 }
 
 /* MENU DESLIZANTE DA ESQUERDA*/
@@ -27,7 +39,7 @@ padding: 10px;
     text-align: auto;
     transform: translateX(-100%);
     transform: transform 1s ease;
-    z-index: 10;
+    z-index: 1000;
     
 }
 #menu.ativo{
@@ -46,6 +58,26 @@ menu button{
     position: absolute;
     top: 10px;
     right: 10px;
+}
+#menu-topo input{
+    height: 100%;/*Ocupa toda altura do header*/
+
+    font-size: 55px;/*Aumenta o texto*/
+    padding: 0px 22px;/* Aumenta o tamanho do botão*/
+    border-radius: 8px;/*Cantos arredondados*/
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: block;
+    background: transparent;
+    height: 100%;
+    
+}
+#menu-topo{
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: stretch;
 }
 /*Serviços*/
 #servicos{
