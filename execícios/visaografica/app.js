@@ -1,20 +1,19 @@
 function abrirmenu(){
-    let menu= document.getElementById("menu")
-     menu.classList.toggle("ativo");
-    if(menu.style.display === "none" || menu.style.display === ""){
-        menu.style.display = "block";
-    }
-    else{
-        menu.style.display="none"
-    }
+    let menu = document.getElementById("menu");
+    let fundo = document.getElementById("fundo");
 
+    menu.classList.add("ativo");   // abre sempre
+    fundo.style.display = "block";
 }
+
 function fecharMenu(){
     let menu= document.getElementById("menu")
     let fundo=document.getElementById("fundo")
     menu.classList.remove("ativo")
     fundo.style.display= "none"
+
 }
+
 function iniciarSlider(classe) {
     let i = 0;
     let imagens = document.querySelectorAll(classe);
@@ -38,4 +37,5 @@ function iniciarSlider(classe) {
 // iniciar sliders
 iniciarSlider(".estampa");
 iniciarSlider(".Encardena");
+
 
