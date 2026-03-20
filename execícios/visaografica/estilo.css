@@ -280,6 +280,23 @@ html{
 
 
 /* preco.html*/
+#pesquisa {
+    display: block;
+    margin: 20px auto;
+    width: 60%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+#pesquisa:focus {
+    border-color: #25D366; /* cor do WhatsApp */
+    box-shadow: 0 0 5px #25D366;
+}
+
 .lista-preco{
     max-width: 500px;
     margin: 10px auto 30px auto;
