@@ -1,4 +1,16 @@
+    function aceitarCookies(){
+        localStorage.setItem("cookiesAceitos","sim");
+        document.getElementById("cookie-box").style.displa="none"
+    }
+    function recusarCookies(){
+        localStorage.setItem("cookiesAceitos","não");
+        document.getElementById("cookie-box").style.displa="none"
+    }
 document.addEventListener("DOMContentLoaded", function() {
+    let escolha = localStorage.getItem("cookiesAceito");
+    if (escolha){
+        document.getElementById("cookie-box").style.display = "none"
+    }
 
     // =========================
     // MENU
@@ -155,4 +167,15 @@ document.getElementById("pesquisa").addEventListener("keyup", function() {
         footer.style.display = "block";
     }
 
+    function irParaWhatsapp(){
+        let aceite = document.getElementById("aceite");
+
+        if(!aceite.checked){
+            alert("Você precisa aceitar os termos antes de continuar.");
+                    return
+        }
+        // Se aceitou - Abre o whatsapp
+        window.open("https://wa.me/2399996093?text=Olá%20vi%20o%20site%20Visão%20Gráfica%20e%20quero%20mais%20informações")
+
+    }
 });

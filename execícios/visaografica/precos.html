@@ -14,19 +14,28 @@
 </script>
     <link rel="stylesheet" href="estilo.css">
     <link rel="shortcut icon" href="imagem/vgpequeno.png" type="image/x-icon">
-    <title>Visão Gráfica ST</title>
+    <title>Listas dos preços</title>
 </head>
-  <title>Visão Gráfica ST</title>
 
-   <meta name="description" content="Visão Gráfica STP é um site de design gráfico, impressão e serviços visuais em São Tomé e Príncipe"> 
 <body>
             <header>
                 <section id="menu-titulo">
                 <img src="imagens/vgnormal.png"><span>Visão Gráfica</span>
                         </section>
-                        
-                        <section id="menu-topo"><a href="index.html"><input type="button" value="≪" onclick="abrirmenu()" ></a></section>
+                <section id="menu-topo">
+                    <input type="button" value="≡" onclick="abrirmenu()" >
+                </section>
             </header>
+                <div id="fundo" onclick="fecharMenu()"></div>
+    <section id="menu">
+        <button onclick="fecharMenu()" >❌</button>
+        <ul>
+            <li><a href="index.html" onclick="fecharMenu();return true;">Início</a></li>
+            <li><a href="#servicos" onclick="fecharMenu(); return true;">Serviços</a></li>
+            <li><a href="precos.html">Preço dos produtos</a></li>
+            <li><a href="whatsapp" onclick="fecharMenu(); return true;">Contactos</a></li>
+        </ul>
+    </section>
     
     <h1>Preços dos produtos</h1>
     
@@ -94,8 +103,8 @@
     <footer id="contactos">
         <p>&copy; 2026 Visão Gráfica. Todos os direitos resservados.</p>
         <p><b>Endereço:</b>Rua Amilca Cabral-São Tomé | <b>Telefone:</b>+239 2221205 |<b> Email:</b> <a href="mailto:visaograficaloja@gmail.com" class="animado"><ins>visaograficaloja@gmail.com</ins></a></p>
-   
-
+        <p><a href="privacidade.html">Política de Privacidade</a></p>
+        <p><a href="termos.html">Termos de Uso</a></p>
         <p id="desenvolvedor"><em><b>Desenvolvedor:</b> &COPY;Daniscarline</em></p>
     </footer>
 

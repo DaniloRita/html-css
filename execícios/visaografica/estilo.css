@@ -141,6 +141,16 @@ display: flex;
     border-radius: 10px;
     height: 200px;
 }
+.aceite-termos{
+    text-align: center;
+    margin: 20px;
+    font-size: 14px;
+}
+.aceite-termos a{
+    color: red;
+    text-decoration: none;
+}
+
 /*RODAPÉ*/
 footer{
     background: #222;
@@ -277,9 +287,35 @@ html{
     color: white;
     cursor: pointer;
 }
+#cookie-box{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    z-index: 9999;
+    border-top: 3px solid #25D366;
+}
+#cookie-box button{
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    border-color: 5px;
+    cursor: pointer;
+}
+#cookie-box button.first-child{
+    background: #25D366;
+    color: white;
+}
+#cookie-box button.last-child{
+    background: red;
+    color: white;
+}
 
-
-/* preco.html*/
+/*---------------------- preco.html-------------------*/
 #pesquisa {
     display: block;
     margin: 20px auto;
@@ -294,7 +330,7 @@ html{
 
 #pesquisa:focus {
     border-color: #25D366; /* cor do WhatsApp */
-    box-shadow: 0 0 5px #25D366;
+    box-shadow: 0 0 5px #016526;
 }
 
 .lista-preco{
@@ -312,6 +348,7 @@ html{
 h2{
     margin-top: 30px;
     color: rgb(10, 88, 202);
+    text-align: center;
 }
 #avaliacoes{
     padding: 20px;
